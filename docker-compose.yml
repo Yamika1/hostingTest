@@ -1,0 +1,13 @@
+services:
+  api:
+    image: ${DOCKER_REGISTRY-}api
+    build:
+      context: .
+      dockerfile: Api/Dockerfile
+
+  recenterhub:
+    image: ${DOCKER_REGISTRY-}recenterhub
+    build:
+      context: .
+      dockerfile: ReCenterHub/Dockerfile
+
